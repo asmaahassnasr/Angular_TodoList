@@ -3,7 +3,7 @@
   <img width="300" height="300" class="img-fluid mx-auto d-block mb-3" [src]="imgSrc" alt="" /> -->
   <div class="container">
     <div class="row">
-      <form (ngSubmit)="createTodo()" class="mt-5 mx-auto">
+      <form (ngSubmit)="createTodo()" class="mt-5 mx-auto" #form1="ngForm">
         <input
           class="form-control m-2 d-inline w-50"
           placeholder="Enter New Task"
