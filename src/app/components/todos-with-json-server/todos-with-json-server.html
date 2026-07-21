@@ -2,14 +2,17 @@
   <!-- <h1 class="text-center text-primary">{{ title }}</h1>
   <img width="300" height="300" class="img-fluid mx-auto d-block mb-3" [src]="imgSrc" alt="" /> -->
   <div class="container">
-    <!-- <div class="row">
-      <div class="col-sm-10">
-        <input class="form-control mb-4" placeholder="Enter New Task" [(ngModel)]="newTask" />
-      </div>
-      <div class="col-sm-2">
-        <button class="btn btn-primary" (click)="addTask()">Add Task</button>
-      </div>
-    </div> -->
+    <div class="row">
+      <form (ngSubmit)="createTodo()" class="mt-5 mx-auto">
+        <input
+          class="form-control m-2 d-inline w-50"
+          placeholder="Enter New Task"
+          name="todoTitle"
+          [(ngModel)]="newTodo.title"
+        />
+        <button type="submit" class="btn btn-primary" id="submit" name="submit">Add Task</button>
+      </form>
+    </div>
 
     <div class="row my-5">
       <div class="col-sm-12">
@@ -24,11 +27,25 @@
           <tbody>
             @for (todo of todos; track $index) {
               <tr>
-                <td>{{ todo.title }}</td>
+                <td>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input mx-2"
+                      type="checkbox"
+                      [(ngModel)]="todo.isCompleted"
+                      value=""
+                    />
+                    <span
+                      [ngClass]="{ 'text-decoration-line-through': todo.isCompleted}"
+                      [routerLink]="['/todos', todo.id]"
+                      >{{ todo.title }}</span
+                    >
+                  </div>
+                </td>
                 <td>
                   <button class="btn btn-warning">Edit</button>
                 </td>
-                <td><button class="btn btn-danger">Remove</button></td>
+                <td><button type="button" class="btn btn-danger" (click)="deleteTodo(todo.id)">Remove</button></td>
               </tr>
             } @empty {
               <tr>

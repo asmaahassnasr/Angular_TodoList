@@ -1,12 +1,30 @@
 {
-  "todos":[
-    {"id":"001" , "title":"Task 001" , "isCompleted":true},
-    {"id":"002" , "title":"Task 002" , "isCompleted":false},
-    {"id":"003" , "title":"Task 003" , "isCompleted":true},
-    {"id":"004" , "title":"Task 004" , "isCompleted":false},
-    {"id":"005" , "title":"Task 005" , "isCompleted":false},
-    {"id":"006" , "title":"Task 006" , "isCompleted":true},
-    {"id":"007" , "title":"Task 007" , "isCompleted":true},
-    {"id":"008" , "title":"Task 008" , "isCompleted":false}
-  ]
+  "todos": [
+    {
+      "title": "Task 002",
+      "isCompleted": false,
+      "id": "pfhuBX0E6bI"
+    },
+    {
+      "title": "Task 002",
+      "isCompleted": false,
+      "id": "jHxYAAEFskw"
+    },
+    {
+      "title": "Task 003",
+      "isCompleted": false,
+      "id": "bwfzj4FTxg8"
+    },
+    {
+      "title": "Task 004",
+      "isCompleted": false,
+      "id": "Iiy9971UJqw"
+    },
+    {
+      "title": "Task 005",
+      "isCompleted": false,
+      "id": "4Wy1W8Y2yN4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
